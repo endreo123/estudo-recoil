@@ -37,6 +37,7 @@ export const Formulario: React.FC = () => {
             alert(erro)
         }
     }
+    
     return (
         <form className={style.Formulario} onSubmit={submeterForm}>
             <h3 className={style.titulo}>Novo evento</h3>
