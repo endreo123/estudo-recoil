@@ -4,8 +4,6 @@ import style from './Calendario.module.scss';
 import ptBR from './localizacao/ptBR.json'
 import Kalend, { CalendarEvent, CalendarView, OnEventDragFinish } from 'kalend'
 import 'kalend/dist/styles/index.css';
-import { useRecoilValue } from 'recoil';
-import { listaDeEventosState } from '../../state/atom';
 import { useAtualizarEvento } from '../../state/hooks/useAtualizarEvento';
 import { useListaDeEventos } from '../../state/hooks/useListaDeEventos';
 

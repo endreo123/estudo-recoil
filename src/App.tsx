@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import style from './App.module.scss';
 import Card from './components/Card';
 import { Formulario } from './components/Formulario';
@@ -6,31 +5,7 @@ import Calendario from './components/Calendario';
 import ListaDeEventos from './components/ListaDeEventos';
 import { RecoilRoot } from 'recoil'
 
-function App() {
-
-    const [filtro, setFiltro] = useState<Date | null>()
-
-    //const alterarStatusEvento = (id: number) => {
-        // const evento = eventos.find(evento => evento.id === id)
-        // if (evento) {
-        //     evento.completo = !evento.completo
-        // }
-        // setEventos([...eventos])
-    //}
-    // const deletarEvento = (id: number) => {
-    //     // setEventos([...eventos.filter(evento => evento.id !== id)])
-    // }
-
-    const aplicarFiltro = (data: Date | null) => {
-        setFiltro(data)
-    }
-
-    // const filtrados = !filtro
-        // ? eventos
-        // : eventos.filter((evento) =>
-        //     filtro!.toISOString().slice(0, 10) === evento.inicio.toISOString().slice(0, 10)
-        // );
-
+export default function App() {
     return (
         <RecoilRoot>
             <div className={style.App}>
@@ -40,7 +15,7 @@ function App() {
                     </Card>
                     <hr />
                     <Card>
-                        <ListaDeEventos aoFiltroAplicado={aplicarFiltro} />
+                        <ListaDeEventos />
                     </Card>
                 </div>
                 <div className={style.Coluna}>
@@ -50,5 +25,3 @@ function App() {
         </RecoilRoot>
     );
 }
-
-export default App;
